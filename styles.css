@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.col{
+    flex-basis: 40%;
+}
+.header{
+    position: relative;
+    padding: 20px;
+    height: 90vh;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.title h1{
+    font-size: 50px;
+}
+body{
+    background:linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    padding: 3% 10%;
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    z-index:8;
+}
+.woman{
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    z-index: 4;
+}
+.shadow{
+    position: absolute;
+    width:600px;
+    left: -20%;
+    top: -10%;
+}
+.answer{
+    height: 0;
+    visibility: hidden;
+    transition: all .3s;
+    overflow: hidden;
+    padding: 0 10px;
+    background: white;
+}
+.answer.active{
+    visibility: visible;
+    height: 80px;
+    padding: 10px;
+}
+.question.active{
+    font-weight: bold;
+}
+.question{
+    cursor: pointer;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s;
+}
+.title{
+    margin: 20px 0;
+}
+.question::after{
+    content: '';
+    background-image: url(images/icon-arrow-down.svg);
+    background-size: cover;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+.question.active::after{
+    transform:rotate(180deg);
+}
+.qa{
+    margin: 20px 0;
+}
+.question:hover{
+    color: orangered;
+}
+@media(max-width:728px){
+    .row{
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 200px;
+        text-align: center;
+    }
+    .header{
+        height: 800px;
+        overflow: visible;
+    }   
+    .woman{
+        width: 350px;
+        top: -13%;
+        left: 14%;
+        z-index: 5;
+    }
+    .shadow{
+        width: 350px;
+        top: -19%;
+        left:14%;
+    }
+    .box{
+        top: 10%;
+        left: 17%;
+    }
+    body{
+        padding: 25% 10%;
+    }
+    .col{
+        overflow: hidden;
+    }
+}
