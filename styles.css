@@ -17,7 +17,7 @@
 .header{
     position: relative;
     padding: 20px;
-    height: 90vh;
+    min-height: 90vh;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
@@ -103,7 +103,6 @@ body{
         text-align: center;
     }
     .header{
-        height: 800px;
         overflow: visible;
     }   
     .woman{
